@@ -2,14 +2,15 @@ import Image from 'next/image';
 import Carousel from 'react-bootstrap/Carousel';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 
 type Props = {};
 
 const Sobre = (props: Props) => {
   return (
-    <div style={{ height: 'max-content' }}>
+    <Container fluid>
       <Row className="text-center" id="sobre">
-        <Card bg="dark" text="light">
+        <Card bg="dark" text="light" style={{ borderRadius: '0' }}>
           <Card.Body>Sobre</Card.Body>
         </Card>
       </Row>
@@ -58,7 +59,7 @@ const Sobre = (props: Props) => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </div>
+    </Container>
   );
 };
 

@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
 import { Nav, Navbar } from 'react-bootstrap';
+import styles from '../styles/Header.module.scss';
+import Image from 'next/image';
 
 type Props = {};
 
@@ -17,12 +19,12 @@ const Header = (props: Props) => {
       >
         <Container style={{ zIndex: '5' }}>
           <Navbar.Brand href="#home">
-            <img src="/favicon.ico" width="44px" height="44px" alt="logo" />
+            <Image src="/favicon.ico" width="44px" height="44px" alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
             id="responsive-navbar-nav"
-            className="justify-content-end"
+            className={styles.navCollapse}
           >
             <Nav className="gap-2">
               <Link href="#construtora" passHref>
